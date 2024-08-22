@@ -1,0 +1,264 @@
+@font-face {
+    font-family: "HelveticaNeue Regular";
+    src: url("./fonts/HelveticaNeueCyr-Roman.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "HelveticaNeue Medium";
+    src: url("./fonts/HelveticaNeueCyr-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "HelveticaNeue Bold";
+    src: url("./fonts/HelveticaNeueCyr-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "SplineSansMono";
+    src: url("./fonts/SplineSansMono-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("./fonts/PlayfairDisplay-Italic.ttf");
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1B1A1A;
+}
+
+.reviews {
+    max-width: 1440px;
+    min-height: 810px;
+    padding-top: 24px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 710px;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.reviews-counts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.reviews-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-count-top {
+    font-family: "SplineSansMono", sans-serif;
+    font-weight: 400;
+    font-size: 96px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 13px;
+}
+
+.reviews-count-bottom {
+    font-family: "SplineSansMono", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 184%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.scroll-block {
+    position: relative;
+}
+
+.slider-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.slider-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("src/lines.png"); /* цвет фона ползунка */
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "SplineSansMono", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.slider-handle:hover {
+    scale: 1.06;
+}
+
+.scroll-percentage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "SplineSansMono", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.review {
+    width: 584px;
+    padding: 35px 30px;
+    min-height: 378px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-top {
+    margin-bottom: 44px;
+    display: flex;
+}
+
+
+.review-top-photo {
+    width: 119px;
+    height: 119px;
+    border-radius: 50%;
+    margin-right: 26px;
+}
+
+.review-top-info {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.info_name {
+    font-family: "HelveticaNeue Bold", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: justify;
+    color: #ffd700;
+    margin-bottom: 9px;
+}
+
+.review-top-info .login {
+    font-family: "HelveticaNeue Regular", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: justify;
+    color: #fff;
+    margin-bottom: 9px;
+}
+
+.review-top-info .subs {
+    font-family: "HelveticaNeue Bold", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: justify;
+    color: #fff;
+}
+
+.review-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.review-bottom_text {
+    font-family: "HelveticaNeue Bold", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.review:nth-child(2) .review-bottom_text {
+    font-size: 24px;
+}
+
+.review-bottom_btn {
+    background: none;
+    border: none;
+    font-family: "HelveticaNeue Regular", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    color: #fff;
+    cursor: pointer;
+    max-width: 46px;
+    align-self: flex-end;
+}
+
+.review .review-top-photo {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.review:nth-child(1) .review-top-photo {
+    background-image: url("./src/1.png");
+}
+
+.review:nth-child(2) .review-top-photo {
+    background-image: url("./src/2.png");
+}
+
+.review:nth-child(3) .review-top-photo {
+    background-image: url("./src/3.png");
+}
+
+.review:before {
+    content: url("./src/top.svg");
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.review:after {
+    content: url("./src/bottom.svg");
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    pointer-events: none;
+}
