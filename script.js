@@ -19,6 +19,7 @@ jQuery(document).ready(function($) {
         $sliderContent.css('transition', 'none');
         $sliderHandle.css('transition', 'none');
 
+
         function moveDrag(e) {
             var currentX = e.type === 'mousemove' ? e.pageX : e.originalEvent.touches[0].pageX;
             var newLeft = startLeft + (currentX - startX);
