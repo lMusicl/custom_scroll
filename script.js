@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+jQuery(document).ready(function($) {
     var $sliderBar = $('.slider-bar');
     var $sliderHandle = $('.slider-handle');
     var $sliderContent = $('.slider-content');
